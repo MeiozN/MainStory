@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from './components/Header';
+import Card from './components/Card';
+import Drawer from './components/Drawer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div className="wrapper">
+<Drawer/>
+<Header />
+ <div className="content">
+<div className="content-header">
+<h1>ტანსაცმელი</h1>
+<div className="search-box">
+  <img width={20} height={20} src="/img/search.svg" alt="search"/>
+  <input placeholder="ძიება..."/>
+</div>
+</div>
+<div className="maincards">
+<Card/>
+<Card/>
+<Card/>
+<Card/>
+<Card/>
+<Card/>
+</div>
+ </div>
+ </div>
   );
 }
 
