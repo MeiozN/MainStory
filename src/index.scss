@@ -25,8 +25,39 @@ body {
 background: #FFFFFF;
 box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
 border-radius: 20px;
-max-width: 1080px;
+max-width: 1410px;
 margin:50px auto;
+.cartEmpty {
+  .cartempty{
+    width: 120px;
+  }
+
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  p {
+    opacity:0.6;
+    width: 280px;
+    line-height: 24px;
+  }
+
+  .greenButton {
+    img {
+      position: relative;
+      top: 1px;
+      transform: rotate(180deg);
+      margin-right: 15px;
+      margin-bottom: 20px;
+      width: 100px;
+      transition: transform 0.15s ease-in-out;
+    }
+  }
+}
+
 .drawershadow{
   position: fixed;
   left: 0;
@@ -36,7 +67,7 @@ margin:50px auto;
   background-color: rgba(0,0,0,0.5);
   z-index: 1;
 }
-.drawer-block{ 
+.drawerblock{ 
 display: flex;
 flex-direction: column;
 position: absolute;
@@ -46,7 +77,9 @@ height: 100%;
 padding: 30px;
 background: #FFFFFF;
 box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-
+.drawercontent{
+  height: 100%;
+}
 .close{
 
 
@@ -70,26 +103,12 @@ box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
 
 .addeditems{
   width: 430px;
+  display: flex;
   overflow: auto;
   height: 70%;
   margin-bottom: 20px;
-  ::-webkit-scrollbar-thumb:active {
-    background: linear-gradient(left, #22ADD4, #1E98BA);
-  }
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(left, #fff, #e4e4e4);
-    border: 1px solid #aaa;
-  }
-  ::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-  }
-
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .order{
@@ -116,7 +135,7 @@ box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
 }
 
 .placeorder{
-
+width: 100%;
 margin-top: 15px;
 display: flex;
 
@@ -134,8 +153,9 @@ display: flex;
   text-decoration:none;
   font-size: 24px;
   color: #FFFFFF;
+  margin-top:20px;
   transition: background-color 0.3s ease-in-out;
-  
+
   &:hover{
     background: darken( #9dd558 ,10%);
     img{
@@ -219,7 +239,7 @@ h2{
   }
 }
 }
-}
+
 header{
   border-bottom: 1px solid #eaeaea;
   padding: 40px;
@@ -229,7 +249,10 @@ header{
 
   .headerRight{
     span{
-      margin-left:10px;      
+      position: relative;
+      left: 5px;
+      top: -5px;
+    
     }
   }
   .headerLeft{
@@ -269,20 +292,34 @@ header{
   .maincards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
   }
   .search-box{
+    position: relative;
     align-items: center;
     border-radius: 10px;
     display: flex;
     padding: 0 15px;
     border: 1px solid #dbdbdb;
+    .searchremove{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 10pxpx;
+      right: 10px;
+
+    }
 
     input{
+
       width: 200px;
       border: 0;
       padding: 13px ;
       font-size: 16px;
+
+      &:focus{
+        outline: none;
+      }
     }
 
   }
@@ -292,67 +329,10 @@ header{
     display: flex;
     align-items: center;
   }
-  .card{
-    display: inline-block;
-    margin: 10px 45px 10px 45px;
-    padding: 30px;
-    width: 170px;
-    background: #FFFFFF;
-    border: 1px solid #dbdbdb;
-    border-radius: 40px;
-    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
-    &:hover {
-      box-shadow: #81add6 0px 10px 40px;
-      transform : translateY(-5px);
-      cursor: pointer;
-
-     }
-
-
-    .favorite{
-      position: absolute;
-      cursor: pointer;
-    }
-
-    span{
-      font: size 12px;
-      opacity: 0.5;
-      text-transform: uppercase;
-    }
-    .item-img{
-      margin: 0 18px 0 18px;
-      
-    }
-    h5{
-      font-weight: 400;
-      font-size:18px
-    }
-
-  }
   h1{
     font-family: 'Noto Serif Georgian', serif;
     
   }
-  .card-button{
-    b{
-      margin-left: 3px;
-  } justify-content: space-between;
-  display: flex;
-  }
-  .card-price{
-    margin-top: 5px;
-    display: flex;
-  }
-
-.add-button{
-  border: 1px solid #dbdbdb;
-  background: #ffffff;
-  box-sizing: border-box;
-  border-radius: 8px;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-}
 }
 
-
+}
