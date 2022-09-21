@@ -1,0 +1,17 @@
+.categorysbox{
+width: 100%;
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    li{
+        cursor: pointer;
+
+    }
+}
+.categorys{
+    font-size: 26px;
+    font-weight: 400;
+}
+}

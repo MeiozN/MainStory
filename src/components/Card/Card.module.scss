@@ -1,0 +1,42 @@
+
+.card{
+    display: inline-block;
+    margin: 20px 50px 10px 50px;
+    padding: 30px;
+    width: 170px;
+    background: #FFFFFF;
+    border: 1px solid #dbdbdb;
+    border-radius: 40px;
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+    &:hover {
+      box-shadow: #81add6 0px 10px 40px;
+      transform : translateY(-5px);
+     }
+    span{
+      font: size 12px;
+      opacity: 0.5;
+      text-transform: uppercase;
+    }
+    h5{
+      font-weight: 400;
+      font-size:18px
+    }
+    .cardbutton{
+      display: flex;
+      b{
+        margin-left: 3px;
+    } justify-content: space-between;
+    display: flex;
+    }
+    .cardprice{
+      margin-top: 5px;
+      display: flex;
+    }
+  
+  .addbutton{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+
+  }
